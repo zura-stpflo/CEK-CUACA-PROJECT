@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Cuaca - Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background-video">
+        <video id="bg-video" autoplay muted loop>
+            <source src="https://files.catbox.moe/t1yo47.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="content">
+        <h1>Cek Cuaca Sekarang!</h1>
+
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Masukkan nama kota..." />
+            <button onclick="getWeather()">Cek Cuaca</button>
+        </div>
+
+        <div id="weather-info" class="weather-info">
+            <h2 id="city-name"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+        </div>
+
+        <div class="settings">
+            <label for="video-url">URL Video Background MP4:</label>
+            <input type="text" id="video-url" placeholder="Masukkan URL MP4 video" />
+            <button onclick="setBackground()">Set Background</button>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
